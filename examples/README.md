@@ -2,13 +2,25 @@
 
 The `ballerinax/xero.projects` connector provides practical examples illustrating usage in various scenarios.
 
-[//]: # (TODO: Add examples)
-1. 
-2. 
+1. **[Project time logging](https://github.com/ballerina-platform/module-ballerinax-xero.projects/tree/main/examples/project_time_logging)** - Create a project for a contact, add a chargeable task, log time against it and read the entries back.
+
+2. **[Project progress report](https://github.com/ballerina-platform/module-ballerinax-xero.projects/tree/main/examples/project_progress_report)** - Compare the estimated and logged minutes of every in-progress project.
 
 ## Prerequisites
 
-[//]: # (TODO: Add prerequisites)
+1. Generate Xero credentials to authenticate the connector as described in the [Setup guide](https://central.ballerina.io/ballerinax/xero.projects/latest#setup-guide).
+
+2. For each example, create a `Config.toml` file with the related configuration. Here's an example of how your Config.toml file should look:
+
+```toml
+clientId = "<client-id>"
+clientSecret = "<client-secret>"
+refreshToken = "<refresh-token>"
+refreshUrl = "https://identity.xero.com/connect/token"
+tenantId = "<xero-tenant-id>"
+```
+
+Each example lists the additional values it needs in its own README.
 
 ## Running an example
 
@@ -24,22 +36,4 @@ Execute the following commands to build an example from the source:
 
     ```bash
     bal run
-    ```
-
-## Building the examples with the local module
-
-**Warning**: Due to the absence of support for reading local repositories for single Ballerina files, the Bala of the module is manually written to the central repository as a workaround. Consequently, the bash script may modify your local Ballerina repositories.
-
-Execute the following commands to build all the examples against the changes you have made to the module locally:
-
-* To build all the examples:
-
-    ```bash
-    ./build.sh build
-    ```
-
-* To run all the examples:
-
-    ```bash
-    ./build.sh run
     ```
